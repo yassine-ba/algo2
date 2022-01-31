@@ -1,0 +1,51 @@
+ALGORITHM algorithm_name
+VAR
+    i : INTEGER ;
+    j : INTEGER ;
+    k : INTEGER := 0;
+    m : INTEGER := 0;
+    l : INTEGER ;
+    n : INTEGER ; 
+
+
+    tab1 : ARRAY_OF INTEGER[100];
+    tab2 : ARRAY_OF INTEGER[100];
+    tab3 : ARRAY_OF INTEGER [100];
+    tab4 : ARRAY_OF INTEGER [100];
+    som1 :INTEGER ;
+    som2 : INTEGER ;
+    test1 : BOOLEAN ;
+    test2 : BOOLEAN ;
+BEGIN
+    FOR i FROM 0 TO max tab1.length step 1 DO
+     FOR j FROM 0 TO max tab2.length step 1 DO
+      IF (tab1[i]= tab2[j]) THEN
+       test := false ; 
+      END_IF
+
+     END_FOR
+     IF (test = true) THEN
+         tab3[k]= tab1[i]
+         k := k+1
+     END_IF
+     
+    END_FOR
+    FOR l FROM 0 TO tab3.length STEP 1  DO
+        som1 := som1 +tab3[l]
+    END_FOR
+    FOR i FROM 0 TO max tab1.length step 1 DO
+     FOR j FROM 0 TO max tab2.length step 1 DO
+      IF (tab1[i]= tab2[j]) THEN
+       test := true ; 
+      END_IF
+
+     END_FOR
+     IF (test = false ) THEN
+         tab4[m]= tab1[i]
+         m := m+1
+     END_IF
+     
+    END_FOR
+    FOR n FROM 0 TO tab4.length STEP 1  DO
+        som2 := som2 +tab4[n]
+END
